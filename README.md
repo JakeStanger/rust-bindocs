@@ -8,7 +8,7 @@ Rustdoc is a brilliant tool, but it's only really suited to libraries.
 Documenting applications can be a pain,
 because you often need to reference types from the code,
 but don't want to include all the internal information or require end-users to look at code docs.
-The alternative is writing everything by hand, but keeping that in sync with code changes can be a pain
+The alternative is writing everything by hand, but keeping that in sync with code changes can be a pain,
 and it is easy to make mistakes.
 
 This tool is designed to simplify that process by providing a basic templating engine
@@ -63,7 +63,7 @@ Defaults to `<project_path>/target/bindoc`.
 
 ---
 
-Inside your input markdown, use `<%   template_blocks   %>` to denote where types should automatically be injected.
+Inside your input markdown, use `<%  template_blocks  %>` to denote where types should automatically be injected.
 You can inject any struct or enum owned by your crate.
 
 For example, if you have a `config` module containing a `MyConfig` struct:
@@ -91,7 +91,7 @@ You can inject it into your documentation as follows:
 
 Lorem ipsum dolar sit amet.
 
-<%   config::AppConfig   %>
+<%  config::AppConfig  %>
 
 Ornare lectus sit amet est placerat in egestas.
 ```
@@ -131,7 +131,7 @@ after the path to the type, before the closing brace.
 For example, to change the heading depth:
 
 ```markdown
-<%   config::AppConfig { depth = 3 }   %>
+<%  config::AppConfig { depth = 3 }  %>
 ```
 
 #### Injection replace options
