@@ -25,7 +25,7 @@ and the contained markdown is seemingly integrated into your document.
 
 `cargo install bindocs`
 
-[crate](https://crates.io/bindocs)
+[crate](https://crates.io/crates/bindocs)
 
 ## Usage
 
