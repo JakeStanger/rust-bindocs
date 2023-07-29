@@ -2,8 +2,9 @@
 name = "bindocs"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT"
+description = "A tool to assist writing documentation for Rust binaries"
+keywords = ["documentation", "generator", "markdown", "binary", "cli"]
 
 [dependencies]
 proc-macro2 = "1.0.66"
