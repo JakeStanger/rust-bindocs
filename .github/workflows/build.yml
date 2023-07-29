@@ -47,14 +47,15 @@ jobs:
           args: --release --all-features
 
       - name: Update README
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && matrix.os == 'ubuntu-latest'
         run: |
-          cargo run -- -d README.template.md -o README.md
+          # use release flag since that's built above
+          cargo run --release -- -d README.template.md -o README.md
 
       - name: Push README
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/master' && matrix.os == 'ubuntu-latest'
         uses: test-room-7/action-update-file@v1
         with:
-          file_path: README.md
+          file-path: README.md
           commit-msg: 'chore: update README from template'
           github-token: ${{ secrets.GITHUB_TOKEN }}
