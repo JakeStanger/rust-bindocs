@@ -5,6 +5,7 @@ edition = "2021"
 license = "MIT"
 description = "A tool to assist writing documentation for Rust binaries"
 keywords = ["documentation", "generator", "markdown", "binary", "cli"]
+repository = "https://github.com/jakestanger/rust-bindocs"
 
 [dependencies]
 proc-macro2 = "1.0.66"
